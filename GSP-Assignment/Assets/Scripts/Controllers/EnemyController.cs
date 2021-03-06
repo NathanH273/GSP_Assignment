@@ -6,20 +6,26 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public float lookRadius = 10f;
+
     Transform player;
     NavMeshAgent enemy; 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        player = PlayerManager.instance.player.transform; 
         enemy = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()   
     {
-        
+        float distance = Vector3.Distance(player.position, transform.position);
+
+        if (distance <- lookRadius)
+        {
+            enemy.SetDestination(player.position);
+        }
     }
 
     void onDrawGizmosSelected()
