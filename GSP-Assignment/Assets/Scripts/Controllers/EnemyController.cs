@@ -13,7 +13,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = PlayerManager.instance.player.transform; 
+        //player = PlayerManager.instance.player.transform; 
         enemy = GetComponent<NavMeshAgent>();
     }
 
