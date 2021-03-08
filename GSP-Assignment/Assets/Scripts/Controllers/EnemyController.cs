@@ -26,6 +26,7 @@ public class EnemyController : MonoBehaviour
         {
             enemy.SetDestination(player.position);
         }
+
     }
 
     void onDrawGizmosSelected()
