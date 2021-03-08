@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public float lookRadius = 10f;
-    public Transform player;
+
+    Transform player;
     NavMeshAgent enemy; 
 
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class EnemyController : MonoBehaviour
     {
         float distance = Vector3.Distance(player.position, transform.position);
 
-        if (distance <- lookRadius)
+        if (distance <= lookRadius)
         {
             enemy.SetDestination(player.position);
         }
