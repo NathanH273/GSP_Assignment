@@ -6,20 +6,27 @@ public class Sword : MonoBehaviour
     public Transform Swords;
     public GameObject Enemy;
     public GameObject Pivot;
-
+    float swingRate = 0.5f;
+    float nextSwing = 0.0f;
+    bool collisionEnable = false;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if ((Input.GetMouseButtonDown(0)) && (Time.time > nextSwing))
         {
-            //Swords.transform.Rotate(0, -110, 0, Space.Pivot);
+            Swords.transform.Rotate(0, -110, 0, Space.Self);
+            nextSwing = Time.time + swingRate;
+            collisionEnable = true;
         }
-       // Swords.transform.Rotate(0, 110, 0, Space.Pivot);
     }
-
+    
 
     void OnCollisionEnter(Collision enemy)
     {
-        Debug.Log("Hit");
+        if (collisionEnable == true)
+        {
+            Debug.Log("Hits");
+            collisionEnable = false;
+        }
     }
 }
