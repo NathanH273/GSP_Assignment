@@ -5,7 +5,6 @@ public class Sword : MonoBehaviour
 {
     public Transform Swords;
     public GameObject Enemy;
-    public GameObject Pivot;
     float swingRate = 0.5f;
     float nextSwing = 0.0f;
     bool collisionEnable = false;
@@ -18,6 +17,7 @@ public class Sword : MonoBehaviour
             nextSwing = Time.time + swingRate;
             collisionEnable = true;
         }
+
     }
     
 
