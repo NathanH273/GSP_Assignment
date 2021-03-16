@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Sword : MonoBehaviour
 {
-    public Transform Sword;
+    public Transform Swords;
     public GameObject Enemy;
     public GameObject Pivot;
 
@@ -12,9 +12,9 @@ public class Sword : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Sword.transform.Rotate(0, -110, 0, Space.Pivot);
+            //Swords.transform.Rotate(0, -110, 0, Space.Pivot);
         }
-        Sword.transform.Rotate(0, 110, 0, Space.Pivot);
+       // Swords.transform.Rotate(0, 110, 0, Space.Pivot);
     }
 
 

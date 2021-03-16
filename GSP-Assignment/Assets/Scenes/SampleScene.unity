@@ -288,6 +288,9 @@ GameObject:
   - component: {fileID: 527566420}
   - component: {fileID: 527566419}
   - component: {fileID: 527566423}
+  - component: {fileID: 527566426}
+  - component: {fileID: 527566425}
+  - component: {fileID: 527566424}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -388,6 +391,48 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &527566424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527566418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378bf87565dc35e4a9747bd18ec07d19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 527566418}
+  enemy: {fileID: 1635769589}
+--- !u!114 &527566425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527566418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe422fe667fa86f4284333e06cac479c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Swords: {fileID: 949771394}
+  Enemy: {fileID: 1635769589}
+  Pivot: {fileID: 0}
+--- !u!114 &527566426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527566418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0870b0f7ac56f7d4fbdbab91136af58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &576462094
 GameObject:
   m_ObjectHideFlags: 0
