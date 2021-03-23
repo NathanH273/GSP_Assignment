@@ -742,6 +742,9 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 100
   healthbar: {fileID: 789455395}
+  invincibilityTime: 1.5
+  invincibilityDeltaTime: 0.15
+  model: {fileID: 527566418}
 --- !u!1 &576462094
 GameObject:
   m_ObjectHideFlags: 0

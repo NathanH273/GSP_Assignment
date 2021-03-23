@@ -45,5 +45,10 @@ public class TargetDummy : MonoBehaviour
         {
             takeDamage(5);
         }
+
+        if (col.gameObject.tag == "bullet")
+        {
+            takeDamage(5);
+        }
     }
 }
