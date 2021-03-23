@@ -7,7 +7,10 @@ public class EnemyController : MonoBehaviour
 {
     public float lookRadius = 10f;
 
+
+    //Interact with player in game. (model)
     Transform player;
+
     NavMeshAgent enemy; 
 
     // Start is called before the first frame update
@@ -34,4 +37,6 @@ public class EnemyController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
+
+  
 }
