@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2451,7 +2451,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-19090
+  m_Name: pb_Mesh14314
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6178,10 +6178,10 @@ GameObject:
   - component: {fileID: 1727345430}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!64 &1727345430
 MeshCollider:
@@ -6252,7 +6252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727345429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.06, z: 0}
   m_LocalScale: {x: 9.172951, y: 9.172951, z: 9.172951}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7589,6 +7589,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5619226912649706004, guid: 655140d46c7eae144b7c4c07a5c44e4b,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2555
+      objectReference: {fileID: 0}
     - target: {fileID: 5619226912649706006, guid: 655140d46c7eae144b7c4c07a5c44e4b,
         type: 3}
       propertyPath: m_RootOrder
@@ -7597,17 +7602,17 @@ PrefabInstance:
     - target: {fileID: 5619226912649706006, guid: 655140d46c7eae144b7c4c07a5c44e4b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.59
+      value: 1.22
       objectReference: {fileID: 0}
     - target: {fileID: 5619226912649706006, guid: 655140d46c7eae144b7c4c07a5c44e4b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.28
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5619226912649706006, guid: 655140d46c7eae144b7c4c07a5c44e4b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.58
+      value: -36.66
       objectReference: {fileID: 0}
     - target: {fileID: 5619226912649706006, guid: 655140d46c7eae144b7c4c07a5c44e4b,
         type: 3}
@@ -7643,6 +7648,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619226912649706008, guid: 655140d46c7eae144b7c4c07a5c44e4b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619226912649706009, guid: 655140d46c7eae144b7c4c07a5c44e4b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 4.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619226912649706009, guid: 655140d46c7eae144b7c4c07a5c44e4b,
+        type: 3}
+      propertyPath: m_Height
+      value: 3.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619226912649706009, guid: 655140d46c7eae144b7c4c07a5c44e4b,
+        type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 5619226912649706011, guid: 655140d46c7eae144b7c4c07a5c44e4b,
         type: 3}
