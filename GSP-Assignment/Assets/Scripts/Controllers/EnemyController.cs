@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public float lookRadius = 10f;
+    public float distance;
 
 
     //Interact with player in game. (model)
@@ -28,7 +29,9 @@ public class EnemyController : MonoBehaviour
         if (distance <= lookRadius)
         {
             enemy.SetDestination(player.position);
+            transform.LookAt(player);
         }
+
 
     }
 

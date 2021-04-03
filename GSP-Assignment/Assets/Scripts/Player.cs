@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
       
     }
 
-    void takeDamage(int damage)
+    public void takeDamage(int damage)
     {
         if (isInvincible) return;
 
