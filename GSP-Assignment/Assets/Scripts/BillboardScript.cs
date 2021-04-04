@@ -8,6 +8,13 @@ public class BillboardScript : MonoBehaviour
     
     public Transform cam;
 
+    
+    void Start()
+    {
+       
+        cam = GameObject.Find("PlayerCam").transform;
+    }
+
     // Update is called once per frame
     void LateUpdate()
     {
