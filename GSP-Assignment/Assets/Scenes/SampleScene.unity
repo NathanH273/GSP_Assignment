@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerModel: {fileID: 527566422}
-  explosionParticles: {fileID: 7684092054024916846, guid: 70825785506913c4c8df6c2e2b8608b1,
+  explosionParticles: {fileID: 4712358693697796928, guid: 3d574f216cdb648478dfc4960bc39f5e,
     type: 3}
   maxHealth: 50
   healthbar: {fileID: 914719380}
@@ -8623,7 +8623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerModel: {fileID: 527566422}
-  explosionParticles: {fileID: 7684092054024916846, guid: 70825785506913c4c8df6c2e2b8608b1,
+  explosionParticles: {fileID: 4712358693697796928, guid: 3d574f216cdb648478dfc4960bc39f5e,
     type: 3}
   maxHealth: 50
   healthbar: {fileID: 1041276279}
@@ -10338,7 +10338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerModel: {fileID: 527566422}
-  explosionParticles: {fileID: 7684092054024916846, guid: 70825785506913c4c8df6c2e2b8608b1,
+  explosionParticles: {fileID: 4712358693697796928, guid: 3d574f216cdb648478dfc4960bc39f5e,
     type: 3}
   maxHealth: 50
   healthbar: {fileID: 169484801}
@@ -10846,6 +10846,12 @@ PrefabInstance:
       propertyPath: playerModel
       value: 
       objectReference: {fileID: 527566422}
+    - target: {fileID: 5167376335601290408, guid: 9953c8d7369d7854bb50909f7de82d14,
+        type: 3}
+      propertyPath: explosionParticles
+      value: 
+      objectReference: {fileID: 4712358693697796928, guid: 3d574f216cdb648478dfc4960bc39f5e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9953c8d7369d7854bb50909f7de82d14, type: 3}
 --- !u!1001 &5619226911054178030

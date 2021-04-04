@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1914172519239365430}
   - component: {fileID: 5167376335601290408}
   m_Layer: 0
-  m_Name: Skull Enemy
+  m_Name: Skull Enemy FINAL
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,8 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67dc615b1afd3174abb2336ebda6946c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerModel: {fileID: 0}
-  explosionParticles: {fileID: 7684092054024916846, guid: 70825785506913c4c8df6c2e2b8608b1,
+  playerModel: {fileID: 1678867427828264835, guid: 3d574f216cdb648478dfc4960bc39f5e,
+    type: 3}
+  explosionParticles: {fileID: 4712358693697796928, guid: 3d574f216cdb648478dfc4960bc39f5e,
     type: 3}
   maxHealth: 50
   healthbar: {fileID: 5167376336197534494}

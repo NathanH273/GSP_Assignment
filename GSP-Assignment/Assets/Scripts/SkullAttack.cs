@@ -30,6 +30,7 @@ public class SkullAttack : MonoBehaviour
         healthbar.SetMaxHealth(maxHealth);
 
         EnemyController enemyScript = GetComponent<EnemyController>();
+        playerModel = GameObject.Find("Player").transform;
     }
 
     void Update()
