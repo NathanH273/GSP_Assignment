@@ -24,6 +24,7 @@ public class RangedEnemy : MonoBehaviour
     //Attacking
     public float attackSpeed;
     bool alreadyAttacked;
+    public GameObject bulletSpawn;
 
     //States
     public float sightRange;
@@ -71,8 +72,9 @@ public class RangedEnemy : MonoBehaviour
         }
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
+        transform.rotation = Quaternion.LookRotation(agent.velocity);
 
-        if(distanceToWalkPoint.magnitude < 1f)
+        if (distanceToWalkPoint.magnitude < 1f)
         {
             walkPointSet = false;
         }
@@ -95,11 +97,13 @@ public class RangedEnemy : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
+        transform.rotation = Quaternion.LookRotation(agent.velocity);
     }
 
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
+        bulletSpawn.transform.LookAt(player);
 
 
 
@@ -107,8 +111,8 @@ public class RangedEnemy : MonoBehaviour
 
         if(!alreadyAttacked)
         {
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            Rigidbody rb = Instantiate(projectile, bulletSpawn.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 34f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
 
             alreadyAttacked = true;
