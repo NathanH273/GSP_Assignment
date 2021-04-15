@@ -11302,7 +11302,7 @@ MonoBehaviour:
     type: 3}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  attackSpeed: 0.22
+  attackSpeed: 1
   bulletSpawn: {fileID: 319804423}
   sightRange: 20
   attackRange: 12
