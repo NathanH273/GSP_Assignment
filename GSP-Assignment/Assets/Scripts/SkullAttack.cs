@@ -24,7 +24,7 @@ public class SkullAttack : MonoBehaviour
         playerModel = GameObject.Find("Player").transform;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(playerModel != null && enemyScript.lookRadius <= enemyScript.distance )
         {
@@ -46,7 +46,7 @@ public class SkullAttack : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(explosionSound, transform.position);
             Instantiate(explosionParticles, transform.position, transform.rotation);
-            //Destroy(gameObject);
+            Destroy(gameObject);
             Debug.Log("skull suicide");
 
         }
