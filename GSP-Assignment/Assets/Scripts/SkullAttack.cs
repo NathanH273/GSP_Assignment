@@ -7,6 +7,7 @@ public class SkullAttack : MonoBehaviour
     //Player Attributes
     public Transform playerModel;
     public GameObject explosionParticles;
+    public Enemy Skull;
 
     //Enemy Health Bar and other misc
     public HealthBarScript healthbar;
@@ -35,6 +36,14 @@ public class SkullAttack : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        if (Skull.currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
 
 
 
@@ -47,11 +56,16 @@ public class SkullAttack : MonoBehaviour
             AudioSource.PlayClipAtPoint(explosionSound, transform.position);
             Instantiate(explosionParticles, transform.position, transform.rotation);
             Destroy(gameObject);
-            Debug.Log("skull suicide");
 
         }
 
 
+    }
+
+    void Die()
+    {
+        Instantiate(explosionParticles, transform.position, transform.rotation);
+        AudioSource.PlayClipAtPoint(explosionSound, transform.position);
     }
 }
 

@@ -103,6 +103,7 @@ MonoBehaviour:
     type: 3}
   explosionParticles: {fileID: 4712358693697796928, guid: 3d574f216cdb648478dfc4960bc39f5e,
     type: 3}
+  Skull: {fileID: 3008537971832065733}
   healthbar: {fileID: 5167376336197534494}
   explosionSound: {fileID: 8300000, guid: dbe1f82a718337d409b6c74ac921317e, type: 3}
   enemyScript: {fileID: 1914172519239365429}
