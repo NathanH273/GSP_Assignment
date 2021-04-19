@@ -7,8 +7,7 @@ using UnityEngine.AI;
 public class RangedEnemy : MonoBehaviour
 {
     //Attributes/stats
-    public int maxHealth = 100;
-    public int currentHealth;
+ 
 
     //Agent stuff
     public NavMeshAgent agent;
@@ -57,6 +56,9 @@ public class RangedEnemy : MonoBehaviour
         {
             AttackPlayer();
         }
+
+
+
     }
 
     private void Patrolling()
@@ -134,4 +136,6 @@ public class RangedEnemy : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
+
+  
 }

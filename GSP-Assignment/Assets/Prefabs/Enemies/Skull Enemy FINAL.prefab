@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1914172519239365429}
   - component: {fileID: 1914172519239365430}
   - component: {fileID: 5167376335601290408}
+  - component: {fileID: 3008537971832065733}
   m_Layer: 0
   m_Name: Skull Enemy FINAL
   m_TagString: enemy
@@ -119,10 +120,24 @@ MonoBehaviour:
     type: 3}
   explosionParticles: {fileID: 4712358693697796928, guid: 3d574f216cdb648478dfc4960bc39f5e,
     type: 3}
-  maxHealth: 50
   healthbar: {fileID: 5167376336197534494}
   explosionSound: {fileID: 8300000, guid: dbe1f82a718337d409b6c74ac921317e, type: 3}
   enemyScript: {fileID: 1914172519239365429}
+--- !u!114 &3008537971832065733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914172519239365433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60666a696cad897429103eb8e122f9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthbar: {fileID: 5167376336197534494}
 --- !u!1 &5167376334950694887
 GameObject:
   m_ObjectHideFlags: 0

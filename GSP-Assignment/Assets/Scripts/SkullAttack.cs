@@ -8,10 +8,6 @@ public class SkullAttack : MonoBehaviour
     public Transform playerModel;
     public GameObject explosionParticles;
 
-    //Enemy Skull Attributes
-    private int currentHealth;
-    public int maxHealth = 50;
-
     //Enemy Health Bar and other misc
     public HealthBarScript healthbar;
     public AudioClip explosionSound;
@@ -23,12 +19,7 @@ public class SkullAttack : MonoBehaviour
         //explosionSound = GetComponent<AudioSource>();
         //healthbar = GetComponent<HealthBarScript>();
 
-        //Set the enemy health to the max health.
-        currentHealth = maxHealth;
-
-        //Set the UI health bar to the enemy's max health.
-        healthbar.SetMaxHealth(maxHealth);
-
+  
         EnemyController enemyScript = GetComponent<EnemyController>();
         playerModel = GameObject.Find("Player").transform;
     }
@@ -40,21 +31,10 @@ public class SkullAttack : MonoBehaviour
             transform.LookAt(playerModel);
         }
 
-        if (currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
+ 
 
     }
 
-    void takeDamage(int damage)
-    {
-        //When player takes damage remove that amount damage to player's current HP
-        currentHealth -= damage;
-
-        //Update UI health bar
-        healthbar.SetHealth(currentHealth);
-    }
 
 
 
@@ -66,21 +46,10 @@ public class SkullAttack : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(explosionSound, transform.position);
             Instantiate(explosionParticles, transform.position, transform.rotation);
-            Destroy(gameObject);
+            //Destroy(gameObject);
             Debug.Log("skull suicide");
 
         }
-
-        if (collision.gameObject.tag == "Player")
-        {
-            takeDamage(5);
-        }
-
-        if (collision.gameObject.tag == "bullet")
-        {
-            takeDamage(5);
-        }
-
 
 
     }
