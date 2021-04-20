@@ -82,7 +82,7 @@ public class GunV2 : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
 
             Enemy target = hit.transform.GetComponent<Enemy>();
             
@@ -93,13 +93,9 @@ public class GunV2 : MonoBehaviour
        
             }
 
-            
-            //if (rangedEnemy != null)
-            //{
-            //    rangedEnemy.takeDamage(damage);
-            //}
 
            // Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+           //Taken out as i cannot make a decent impact effect lol
 
         }
 

@@ -4048,6 +4048,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skull Enemy FINAL (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3008537971832065733, guid: 9953c8d7369d7854bb50909f7de82d14,
+        type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5167376335463730784, guid: 9953c8d7369d7854bb50909f7de82d14,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -11181,7 +11186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60666a696cad897429103eb8e122f9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 300
   currentHealth: 0
   healthbar: {fileID: 2043732206}
 --- !u!4 &7203358886135247195
