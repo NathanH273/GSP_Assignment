@@ -66,6 +66,7 @@ public class SkullAttack : MonoBehaviour
     {
         Instantiate(explosionParticles, transform.position, transform.rotation);
         AudioSource.PlayClipAtPoint(explosionSound, transform.position);
+        Destroy(gameObject);
     }
 }
 

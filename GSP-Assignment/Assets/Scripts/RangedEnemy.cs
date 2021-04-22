@@ -14,6 +14,7 @@ public class RangedEnemy : MonoBehaviour
     public Transform player;
     public LayerMask ground, whatIsPlayer;
     public GameObject projectile;
+    public Enemy bowEnemy;
 
     //Patrolling 
     public Vector3 walkPoint;
@@ -30,6 +31,10 @@ public class RangedEnemy : MonoBehaviour
     public float attackRange;
     public bool playerInSightRange;
     public bool playerInAttackRange;
+
+    //Misc
+    public GameObject explosionParticles;
+    public AudioClip explosionSound;
 
     private void Awake()
     {
@@ -57,7 +62,10 @@ public class RangedEnemy : MonoBehaviour
             AttackPlayer();
         }
 
-
+        if (bowEnemy.currentHealth <= 0)
+        {
+            Die();
+        }
 
     }
 
@@ -137,5 +145,11 @@ public class RangedEnemy : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 
+    private void Die()
+    {
+        Instantiate(explosionParticles, transform.position, transform.rotation);
+        AudioSource.PlayClipAtPoint(explosionSound, transform.position);
+        Destroy(gameObject);
+    }
   
 }
