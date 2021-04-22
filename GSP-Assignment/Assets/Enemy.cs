@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        healthbar.SetHealth(currentHealth);
     }
 
     // Update is called once per frame

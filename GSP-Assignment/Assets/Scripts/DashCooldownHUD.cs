@@ -23,7 +23,14 @@ public class DashCooldownHUD : MonoBehaviour
         
         }
 
-      
+        if(!controller.dashTimer && image.fillAmount >= 0)
+        {
+            image.fillAmount = 1;
+        }
+
+  
+
+
     }
 
 }
