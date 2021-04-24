@@ -6,10 +6,17 @@ public class ThirdPersonCharacterController : MonoBehaviour
 {
     //Movement Values
     public float speed; 
-    public float jumpForce; 
+    public float jumpForce;
+    public float dashForce;
+    public bool dashTimer = false;
+    public int dashCooldownDuration;
 
     public bool isOnGround = true;
+    public int noOfJumps;
     public Rigidbody rb;
+    public bool jumpUpgrade= false;
+
+    public Vector3 pos;
 
 
 
@@ -32,12 +39,32 @@ public class ThirdPersonCharacterController : MonoBehaviour
         transform.Translate(playerMovement, Space.Self);
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        if(isOnGround) 
         {
-            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
-            isOnGround = false; 
+            if (jumpUpgrade == true)
+            {
+                noOfJumps = 2;
+            }
+            else
+            {
+                noOfJumps = 1;
+            }
         }
 
+        if (Input.GetKeyDown(KeyCode.Space) && noOfJumps > 0)
+        {
+            isOnGround = false;
+            noOfJumps--;
+            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !dashTimer )
+        {
+            StartCoroutine(dashCoolDown(dashCooldownDuration));
+            Dash();
+            dashTimer = true;
+            
+        }
 
     }
 
@@ -47,5 +74,18 @@ public class ThirdPersonCharacterController : MonoBehaviour
         {
             isOnGround = true; 
         }
+    }
+
+    void Dash()
+    {
+        rb.AddForce(transform.forward * dashForce, ForceMode.Impulse);
+    }
+
+    IEnumerator dashCoolDown(int dashCoolDownDuration)
+    {
+        yield return new WaitForSeconds(dashCoolDownDuration);
+        Debug.Log("dash can now be used again.");
+        dashTimer = false;
+
     }
 }
