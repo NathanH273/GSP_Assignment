@@ -41,8 +41,11 @@ public class DashUpgrade : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform == playerModel)
+        if (collision.transform == playerModel && !hasEntered)
         {
+            //Has entered boolean
+            hasEntered = true;
+
             AudioSource.PlayClipAtPoint(upgradeSFX, transform.position, 1.0f);
             player.dashCooldownDuration -= 1;
 

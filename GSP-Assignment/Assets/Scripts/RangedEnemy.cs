@@ -35,6 +35,7 @@ public class RangedEnemy : MonoBehaviour
     //Misc
     public GameObject explosionParticles;
     public AudioClip explosionSound;
+    public AudioClip arrowSFX;
 
     private void Awake()
     {
@@ -121,6 +122,7 @@ public class RangedEnemy : MonoBehaviour
 
         if(!alreadyAttacked)
         {
+            AudioSource.PlayClipAtPoint(arrowSFX, transform.position);
             Rigidbody rb = Instantiate(projectile, bulletSpawn.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 34f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
