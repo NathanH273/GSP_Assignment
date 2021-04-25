@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletUpgrade : MonoBehaviour
+public class ReloadUpgrade : MonoBehaviour
 {
-    //Spin animation
-    public GameObject target;
+    //Spin
+    public GameObject spin;
 
     //Upgrading the player
     public Transform playerModel;
@@ -23,6 +23,7 @@ public class BulletUpgrade : MonoBehaviour
 
     void Awake()
     {
+        //Player
         playerModel = GameObject.Find("Player").transform;
         gun = GameObject.Find("Magnum_Revolver").GetComponent<GunV2>();
 
@@ -30,12 +31,13 @@ public class BulletUpgrade : MonoBehaviour
         hudGameObject = GameObject.Find("Upgrade HUD");
         hud = hudGameObject.GetComponent<UpgradeHUD>();
 
+
     }
+
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(target.transform.position, Vector3.up, 77 * Time.deltaTime);
-
+        transform.RotateAround(spin.transform.position, Vector3.up, 77 * Time.deltaTime);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -48,18 +50,18 @@ public class BulletUpgrade : MonoBehaviour
             hasEntered = true;
 
             //Upgrade
-            gun.maxAmmo += 2;
+            gun.reloadTime -= 0.33f;
 
             //HUD
-            hud.SetTitle("Ammo Capacity Max Upgrade");
-            hud.SetDesc("+2 on Max Ammo!");
-            hudGameObject.SetActive(true);  
+            hud.SetTitle("Reload Speed Upgrade");
+            hud.SetDesc("You reload slightly faster now.");
+            hudGameObject.SetActive(true);
             hud.itemPickup = true;
 
             //Destroy the gameobject
             Destroy(gameObject);
 
         }
-     
+
     }
 }

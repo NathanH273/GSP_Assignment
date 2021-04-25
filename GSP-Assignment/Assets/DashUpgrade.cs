@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jumpUpgrade : MonoBehaviour
+public class DashUpgrade : MonoBehaviour
 {
-    //Player
+    //Spin
+    public GameObject spin;
+
+    //Upgrading the player
     public ThirdPersonCharacterController player;
     public Transform playerModel;
 
-    //HUD
+    //Text
+    public UpgradeHUD hud;
     public GameObject hudGameObject;
-    public UpgradeHUD hudScript;
+
+    //Stuff so it doesn't bug out and give player more than intended 
+    public bool hasEntered;
 
     //Sound
     public AudioClip upgradeSFX;
@@ -23,23 +29,27 @@ public class jumpUpgrade : MonoBehaviour
 
         //HUD
         hudGameObject = GameObject.Find("Upgrade HUD");
-        hudScript = hudGameObject.GetComponent<UpgradeHUD>();
+        hud = hudGameObject.GetComponent<UpgradeHUD>();
 
 
+    }
+
+    void Update()
+    {
+        transform.RotateAround(spin.transform.position, Vector3.up, 77 * Time.deltaTime);
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.transform == playerModel)
         {
-            AudioSource.PlayClipAtPoint(upgradeSFX, transform.position, 0.5f);
+            AudioSource.PlayClipAtPoint(upgradeSFX, transform.position, 1.0f);
+            player.dashCooldownDuration -= 1;
 
-            player.jumpUpgrade = true;
-            
-            hudScript.SetTitle("Double Jump Upgrade");
-            hudScript.SetDesc("You can now double jump.");
+            hud.SetTitle("Dash Upgrade");
+            hud.SetDesc("Reduced Cooldown on Dash");
             hudGameObject.SetActive(true);
-            hudScript.itemPickup = true;
+            hud.itemPickup = true;
 
             Destroy(gameObject);
         }
