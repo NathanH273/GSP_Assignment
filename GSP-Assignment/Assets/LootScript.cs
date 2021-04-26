@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class LootScript : MonoBehaviour
 {
     public Text text;
+    public GameObject chest;
+    public Transform spawn;
 
+    public List<GameObject> drops;
     public int[] table =
     {
         20, //Jump upgrade
@@ -15,6 +18,8 @@ public class LootScript : MonoBehaviour
         20, //Dash Cooldown
         20, //Cloak of Flames upgrade (idk couldn't think of anything)
     };
+    public int total;
+    public int randomNumber;
 
     public bool playerNearby; // change to private later
 
@@ -24,6 +29,28 @@ public class LootScript : MonoBehaviour
     void Start()
     {
         playerNearby = false;
+
+        foreach (var item in table)
+        {
+            total += item;
+        }
+
+        randomNumber = Random.Range(0, total);
+
+        for (int i = 0; i < table.Length; i++)
+        {
+            if (randomNumber <= table[i])
+            {
+                Instantiate(drops[i], spawn);
+                return;
+            }
+
+            else
+            {
+                randomNumber -= table[i];
+            }
+        }
+
     }
 
     // Update is called once per frame
