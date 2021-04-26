@@ -21722,7 +21722,7 @@ MonoBehaviour:
   bowEnemy: {fileID: 7203358886135247192}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  attackSpeed: 1
+  attackSpeed: 0.33
   bulletSpawn: {fileID: 319804423}
   sightRange: 20
   attackRange: 12
