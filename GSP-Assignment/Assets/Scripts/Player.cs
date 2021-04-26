@@ -55,6 +55,10 @@ public class Player : MonoBehaviour
         {
             takeDamage(5);
         }
+        if (col.gameObject.tag == "Enemy Skull Boss")
+        {
+            takeDamage(30);
+        }
     }
 
     private IEnumerator temporarilyInvincible()

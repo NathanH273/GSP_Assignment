@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkullAttack : MonoBehaviour
+public class SkullBossAttack : MonoBehaviour
 {
     //Player Attributes
     public Transform playerModel;
@@ -13,26 +13,26 @@ public class SkullAttack : MonoBehaviour
     public HealthBarScript healthbar;
     public AudioClip explosionSound;
     public EnemyController enemyScript;
+    public GameObject enemySpawn;
     
-
     void Start()
     {
         //explosionSound = GetComponent<AudioSource>();
         //healthbar = GetComponent<HealthBarScript>();
 
-  
+
         EnemyController enemyScript = GetComponent<EnemyController>();
         playerModel = GameObject.Find("Player").transform;
     }
 
     void FixedUpdate()
     {
-        if(playerModel != null && enemyScript.lookRadius <= enemyScript.distance )
+        if (playerModel != null && enemyScript.lookRadius <= enemyScript.distance)
         {
             transform.LookAt(playerModel);
         }
 
- 
+
 
     }
 
@@ -40,7 +40,9 @@ public class SkullAttack : MonoBehaviour
     {
         if (Skull.currentHealth <= 0)
         {
-            Debug.Log("Dead");
+            Instantiate(enemySpawn, transform.position, transform.rotation);
+            Instantiate(enemySpawn, transform.position, transform.rotation);
+            Instantiate(enemySpawn, transform.position, transform.rotation);
             Die();
         }
     }
@@ -54,6 +56,9 @@ public class SkullAttack : MonoBehaviour
 
         if (collision.transform == playerModel)
         {
+            Instantiate(enemySpawn, transform.position, transform.rotation);
+            Instantiate(enemySpawn, transform.position, transform.rotation);
+            Instantiate(enemySpawn, transform.position, transform.rotation);
             AudioSource.PlayClipAtPoint(explosionSound, transform.position);
             Instantiate(explosionParticles, transform.position, transform.rotation);
             Destroy(gameObject);
