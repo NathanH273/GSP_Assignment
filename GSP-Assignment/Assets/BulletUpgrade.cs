@@ -49,6 +49,7 @@ public class BulletUpgrade : MonoBehaviour
 
             //Upgrade
             gun.maxAmmo += 2;
+            gun.currentAmmo = gun.maxAmmo;
 
             //HUD
             hud.SetTitle("Ammo Capacity Max Upgrade");
