@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: VolumetricMaterialT
+  m_Shader: {fileID: -6465566751694194690, guid: 9a3d35d446d1f7c41b017e74cd9a2ee1,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_1F3FB808_Texture_1:
+        m_Texture: {fileID: 2800000, guid: cf817016560ae4e43b1929f554e9a8b9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_C7AE1AD9_Texture_1:
+        m_Texture: {fileID: 2800000, guid: cf817016560ae4e43b1929f554e9a8b9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_86696537: 1
+    - Vector1_48B9F154: 2
+    - Vector1_EB1685D3: 1.19
+    m_Colors:
+    - Color_A520E2EF: {r: 1, g: 1, b: 1, a: 0}
