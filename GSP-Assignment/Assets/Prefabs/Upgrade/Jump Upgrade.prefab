@@ -107,3 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  playerModel: {fileID: 0}
+  hudGameObject: {fileID: 0}
+  hudScript: {fileID: 0}
+  upgradeSFX: {fileID: 8300000, guid: 3a03f2ecab1391e4fab6bb89634f068f, type: 3}

@@ -40,7 +40,7 @@ public class SkullAttack : MonoBehaviour
     {
         if (Skull.currentHealth <= 0)
         {
-            Debug.Log("Dead");
+            //Debug.Log("Dead");
             Die();
         }
     }

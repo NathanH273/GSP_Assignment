@@ -54,7 +54,8 @@ public class BulletUpgrade : MonoBehaviour
             //HUD
             hud.SetTitle("Ammo Capacity Max Upgrade");
             hud.SetDesc("+2 on Max Ammo!");
-            hudGameObject.SetActive(true);  
+            hud.title.enabled = true;
+            hud.desc.enabled = true;
             hud.itemPickup = true;
 
             //Destroy the gameobject

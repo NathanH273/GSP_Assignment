@@ -25,7 +25,7 @@ public class Sword : MonoBehaviour
     {
         if (collisionEnable == true)
         {
-            Debug.Log("Hits");
+            //Debug.Log("Hits");
             collisionEnable = false;
         }
     }

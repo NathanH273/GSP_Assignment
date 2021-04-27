@@ -51,7 +51,8 @@ public class DashUpgrade : MonoBehaviour
 
             hud.SetTitle("Dash Upgrade");
             hud.SetDesc("Reduced Cooldown on Dash");
-            hudGameObject.SetActive(true);
+            hud.title.enabled = true;
+            hud.desc.enabled = true;
             hud.itemPickup = true;
 
             Destroy(gameObject);

@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
     private IEnumerator temporarilyInvincible()
     {
         isInvincible = true;
-        Debug.Log("player invisible");
+        //Debug.Log("player invisible");
 
         for (float i = 0; i < invincibilityTime; i += invincibilityDeltaTime)
         {
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
         }
 
         isInvincible = false;
-        Debug.Log("player not invisible");
+        //Debug.Log("player not invisible");
     }
 
  

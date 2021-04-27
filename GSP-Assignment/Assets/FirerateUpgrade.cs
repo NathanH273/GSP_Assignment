@@ -56,7 +56,8 @@ public class FirerateUpgrade : MonoBehaviour
             //HUD
             hud.SetTitle("Fire Rate Upgrade");
             hud.SetDesc("You shoot faster now.");
-            hudGameObject.SetActive(true);
+            hud.title.enabled = true;
+            hud.desc.enabled = true;
             hud.itemPickup = true;
 
             //Destroy the gameobject

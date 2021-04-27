@@ -6,13 +6,15 @@ using TMPro;
 
 public class LootScript : MonoBehaviour
 {
+    //Variables
+    public float radius = 3f;
+
     //Text
     public Text prompt;
 
     //Objects
-    public GameObject angel;
     public Transform spawn;
-
+    
     //Loot
     public List<GameObject> drops;
     public int[] table =
@@ -26,8 +28,9 @@ public class LootScript : MonoBehaviour
     public int total;
     public int randomNumber;
 
-    //Player Nearby
-    public bool playerNearby; // change to private later
+    private bool upgradeGiven = false;
+
+
 
 
 
@@ -37,9 +40,31 @@ public class LootScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        prompt.enabled = false;
-        playerNearby = false;
 
+      
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        
+    }
+
+    void onDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
+
+    void DisplayText()
+    {
+        prompt.enabled = true;
+    }
+
+    public void GiveUpgrade()
+    {
         foreach (var item in table)
         {
             total += item;
@@ -51,7 +76,11 @@ public class LootScript : MonoBehaviour
         {
             if (randomNumber <= table[i])
             {
-                Instantiate(drops[i], spawn);
+                if (!upgradeGiven)
+                {
+                    upgradeGiven = true;
+                    Instantiate(drops[i], spawn.transform.position, Quaternion.identity);
+                }
                 return;
             }
 
@@ -59,24 +88,6 @@ public class LootScript : MonoBehaviour
             {
                 randomNumber -= table[i];
             }
-        }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (playerNearby)
-        {
-            prompt.enabled = true;
-        }
-    }
-
-    void OnTriggerExit(Collider collider)
-    {
-        if (collider.tag == "player")
-        {
-            playerNearby = true;
         }
     }
 }

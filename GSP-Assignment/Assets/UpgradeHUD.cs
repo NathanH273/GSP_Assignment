@@ -29,7 +29,9 @@ public class UpgradeHUD : MonoBehaviour
     }
     void Start()
     {
-        hud.SetActive(false);
+        title.enabled = false;
+        desc.enabled = false;
+        //hud.SetActive(false);
         timer = cooldown; 
     }
 
@@ -42,7 +44,9 @@ public class UpgradeHUD : MonoBehaviour
 
             if (timer < 0)
             {
-                hud.SetActive(false);
+                //hud.SetActive(false);
+                title.enabled = false;
+                desc.enabled = false;
                 itemPickup = false;
                 timer = cooldown;
             }

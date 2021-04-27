@@ -23,6 +23,9 @@ public class GunV2 : MonoBehaviour
     private bool isReloading = false;
     private float nextTimeToFire = 0f;
 
+
+  
+
     //Anim
     public Animator animator;
 
@@ -69,7 +72,12 @@ public class GunV2 : MonoBehaviour
             Shoot();
         }
 
-     
+        if (Input.GetKeyDown("e"))
+        {
+            Interact();
+        }
+
+
     }
     void Shoot()
     {
@@ -84,6 +92,7 @@ public class GunV2 : MonoBehaviour
         {
             //Debug.Log(hit.transform.name);
 
+        
             Enemy target = hit.transform.GetComponent<Enemy>();
             
 
@@ -101,10 +110,28 @@ public class GunV2 : MonoBehaviour
 
     }
 
+    void Interact()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
+        {
+
+            LootScript chest = hit.transform.GetComponent<LootScript>();
+
+            if (chest != null)
+            {
+                Debug.Log("chest opened");
+                chest.GiveUpgrade();
+            }
+
+
+        }
+    }
+
     IEnumerator Reload()
     {
         isReloading = true;
-        Debug.Log("reloading..");
+       
 
         animator.SetBool("Reloading", true);
         yield return new WaitForSeconds(reloadTime - .25f);

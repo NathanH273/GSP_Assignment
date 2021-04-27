@@ -55,7 +55,8 @@ public class ReloadUpgrade : MonoBehaviour
             //HUD
             hud.SetTitle("Reload Speed Upgrade");
             hud.SetDesc("You reload slightly faster now.");
-            hudGameObject.SetActive(true);
+            hud.title.enabled = true;
+            hud.desc.enabled = true;
             hud.itemPickup = true;
 
             //Destroy the gameobject

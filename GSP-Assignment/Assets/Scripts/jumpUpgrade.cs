@@ -38,7 +38,8 @@ public class jumpUpgrade : MonoBehaviour
             
             hudScript.SetTitle("Double Jump Upgrade");
             hudScript.SetDesc("You can now double jump.");
-            hudGameObject.SetActive(true);
+            hudScript.title.enabled = true;
+            hudScript.desc.enabled = true;
             hudScript.itemPickup = true;
 
             Destroy(gameObject);
