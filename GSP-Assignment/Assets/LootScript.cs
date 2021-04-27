@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LootScript : MonoBehaviour
 {
-    public Text text;
-    public GameObject chest;
+    //Text
+    public Text prompt;
+
+    //Objects
+    public GameObject angel;
     public Transform spawn;
 
+    //Loot
     public List<GameObject> drops;
     public int[] table =
     {
@@ -21,13 +26,18 @@ public class LootScript : MonoBehaviour
     public int total;
     public int randomNumber;
 
+    //Player Nearby
     public bool playerNearby; // change to private later
+
+
+
 
     
 
     // Start is called before the first frame update
     void Start()
     {
+        prompt.enabled = false;
         playerNearby = false;
 
         foreach (var item in table)
@@ -56,6 +66,17 @@ public class LootScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerNearby)
+        {
+            prompt.enabled = true;
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.tag == "player")
+        {
+            playerNearby = true;
+        }
     }
 }
