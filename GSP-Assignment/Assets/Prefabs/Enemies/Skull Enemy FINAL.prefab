@@ -107,6 +107,19 @@ MonoBehaviour:
   healthbar: {fileID: 5211678874295206479}
   explosionSound: {fileID: 8300000, guid: dbe1f82a718337d409b6c74ac921317e, type: 3}
   enemyScript: {fileID: 1914172519239365429}
+  ground:
+    serializedVersion: 2
+    m_Bits: 512
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 256
+  agent: {fileID: 1914172519239365435}
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 14
+  playerInSightRange: 0
+  playerInAttackRange: 0
+  sightRange: 14
+  attackRange: 15
 --- !u!114 &3008537971832065733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,7 +688,7 @@ PrefabInstance:
     - target: {fileID: 700899755404509476, guid: 79e19d35610e75b42b2c43ce97be4990,
         type: 3}
       propertyPath: m_Materials.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2628554928075714766, guid: 79e19d35610e75b42b2c43ce97be4990,
         type: 3}
