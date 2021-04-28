@@ -55,6 +55,12 @@ public class Player : MonoBehaviour
         {
             takeDamage(5);
         }
+
+        if (col.gameObject.tag == "bullet")
+        {
+            takeDamage(5);
+        }
+
         if (col.gameObject.tag == "Enemy Skull Boss")
         {
             takeDamage(30);

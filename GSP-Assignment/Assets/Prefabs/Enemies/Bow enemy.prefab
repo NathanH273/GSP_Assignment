@@ -92,7 +92,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
-  projectile: {fileID: 8211799061473430075, guid: 1b0a5af5d1b5d0b469fc1ce761b5eb99,
+  projectile: {fileID: 6836442070641156356, guid: e6bb3607fb027d84d8ae0ef7c7cc1d8c,
     type: 3}
   bowEnemy: {fileID: 6125244261799066700}
   walkPoint: {x: 0, y: 0, z: 0}
