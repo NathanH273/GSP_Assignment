@@ -49,7 +49,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 134109582570006242}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2.41
+  m_Radius: 0.62
   m_Speed: 5
   m_Acceleration: 77
   avoidancePriority: 49
@@ -99,6 +99,7 @@ MonoBehaviour:
     type: 3}
   bowEnemy: {fileID: 134109582570006252}
   walkPoint: {x: 0, y: 0, z: 0}
+  walkPointSet: 0
   walkPointRange: 5
   attackSpeed: 1
   bulletSpawn: {fileID: 7073760050304435123}
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60666a696cad897429103eb8e122f9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  maxHealth: 200
   currentHealth: 0
   healthbar: {fileID: 7073760052076738394}
 --- !u!1 &7073760050304435123
