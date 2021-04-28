@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TargetPuzzle : MonoBehaviour
 {
-    public gameObject bullet;
+    public GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
