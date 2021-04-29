@@ -31,6 +31,6 @@ Material:
     m_Floats:
     - Boolean_86696537: 1
     - Vector1_48B9F154: 2
-    - Vector1_EB1685D3: 0.65
+    - Vector1_EB1685D3: 0.25
     m_Colors:
-    - Color_A520E2EF: {r: 0.9811321, g: 0.92512167, b: 0.7080812, a: 0}
+    - Color_A520E2EF: {r: 0.9716981, g: 0.9354288, b: 0.79294235, a: 0}
