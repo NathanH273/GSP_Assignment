@@ -34,6 +34,7 @@ public class GunV2 : MonoBehaviour
 
     void Start()
     {
+        Physics.IgnoreLayerCollision(11, 13);
         currentAmmo = maxAmmo;
         ammoHud.SetAmmo(currentAmmo, maxAmmo);
 
