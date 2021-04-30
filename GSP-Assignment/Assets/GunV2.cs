@@ -94,12 +94,18 @@ public class GunV2 : MonoBehaviour
 
         
             Enemy target = hit.transform.GetComponent<Enemy>();
-            
+            TargetPuzzle T = hit.transform.GetComponent<TargetPuzzle>();
 
             if (target != null)
             {
                 target.takeDamage(damage);
        
+            }
+
+            if(T != null)
+            {
+                T.hitT();
+                Debug.Log("IT WORKS");
             }
 
 

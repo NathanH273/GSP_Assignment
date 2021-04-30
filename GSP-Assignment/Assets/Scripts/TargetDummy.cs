@@ -39,7 +39,7 @@ public class TargetDummy : MonoBehaviour
         healthbar.SetHealth(currentHealth);
     }
 
-    public void OnCollisionEnter(Collision col)
+    public void hit(Collider col)
     {
         if (col.gameObject.tag == "Player")
         {
