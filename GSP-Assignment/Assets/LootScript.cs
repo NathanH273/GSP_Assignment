@@ -31,7 +31,8 @@ public class LootScript : MonoBehaviour
     private bool upgradeGiven = false;
 
 
-
+    //Animator
+    public Animator animator;
 
 
 
@@ -65,6 +66,7 @@ public class LootScript : MonoBehaviour
 
     public void GiveUpgrade()
     {
+        animator.SetBool("openChest", true);
         foreach (var item in table)
         {
             total += item;
