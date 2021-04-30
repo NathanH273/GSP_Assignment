@@ -42,6 +42,14 @@ public class SkullAttack : MonoBehaviour
 
     void FixedUpdate()
     {
+        
+
+ 
+
+    }
+
+    void Update()
+    {
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
@@ -50,17 +58,11 @@ public class SkullAttack : MonoBehaviour
             Patrolling();
         }
 
-        else if (playerModel != null && enemyScript.lookRadius <= enemyScript.distance )
+        else if (playerModel != null && enemyScript.lookRadius <= enemyScript.distance)
         {
             transform.LookAt(playerModel);
         }
 
- 
-
-    }
-
-    void Update()
-    {
         if (Skull.currentHealth <= 0)
         {
             //Debug.Log("Dead");

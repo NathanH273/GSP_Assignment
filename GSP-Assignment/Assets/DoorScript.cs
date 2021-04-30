@@ -8,6 +8,7 @@ public class DoorScript : MonoBehaviour
     public Animator RightDoor;
     public DoorTrigger trigger;
 
+    public bool openDoor;
     public float timer = 20f;
 
     // Start is called before the first frame update
@@ -19,13 +20,24 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (trigger.playerEnter)
+        if (openDoor)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0.0f)
+            if (trigger.playerEnter)
             {
-                OpenDoor();
+                timer -= Time.deltaTime;
+                if (timer <= 0.0f)
+                {
+                    OpenDoor();
+                }
             }
+        }
+
+        if(!openDoor)
+        {
+            if (trigger.playerEnter)
+                {
+                    CloseDoor();
+                }
         }
     }
 
@@ -38,8 +50,8 @@ public class DoorScript : MonoBehaviour
 
     public void CloseDoor()
     {
-        LeftDoor.SetBool("openDoor", false);
-        RightDoor.SetBool("openDoor", false);
+        LeftDoor.SetBool("closeDoor", true);
+        RightDoor.SetBool("closeDoor", true);
 
     }
 }
