@@ -4,46 +4,45 @@ using UnityEngine;
 
 public class TargetPuzzle : MonoBehaviour
 {
-    public GameObject target2;
     public GameObject target;
+    int CPos;
     int TPos = 0;
     float distance;
+    public bool IsCorrect;
     // Start is called before the first frame update
     void Start()
     {
-        Color WrongColour = new Color(256, 0, 0, 1);
-        Color RightColour = new Color(0, 256, 0, 1);
-
-        MeshRenderer targetRenderer = target.GetComponent<MeshRenderer>();
-        Material newMaterial = new Material(Shader.Find("Correct"));
-
-        newMaterial.color = WrongColour;
-        targetRenderer.material = newMaterial;
-
-        distance = Vector3.Distance(target.transform.postition, target2.transform.position);
-        Debug.Log("Dis:" + distance);
+        CPos = Random.Range(0, 3);
+        Debug.Log("CPOS: " + CPos);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(TPos == CPos)
+        {
+            target.GetComponent<MeshRenderer>().material.color = Color.green;
+            IsCorrect = true;
+        }
+        else
+        {
+            target.GetComponent<MeshRenderer>().material.color = Color.red;
+        }
     }
 
     public void hitT()
     {
-        Debug.Log("I");
-        if (TPos < 3)
+        if (TPos < 4)
         {
-            Debug.Log(TPos);
             transform.Translate(0,-1,0, Space.Self);
             TPos += 1;
         }
         if (TPos == 3 )
         {
-            Debug.Log(TPos);
             transform.Translate(0, 3, 0, Space.Self) ;
             TPos = 0;
         }
 
     }
+    
 }
