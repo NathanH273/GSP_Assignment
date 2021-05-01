@@ -14,12 +14,15 @@
 	}
 	SubShader
 	{
+		Tags { "RenderPipeline" = "UniversalPipeline" }
+		
 		Pass
 		{
 
 		Tags{
-		"LightMode" = "ForwardBase"
+		//"LightMode" = "ForwardBase"
 		"PassFlags" = "OnlyDirectional"
+		"LightMode" = "UniversalForward"
 			}
 				
 
