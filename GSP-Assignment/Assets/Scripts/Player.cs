@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 
         if (col.gameObject.tag == "Enemy Skull Boss")
         {
-            takeDamage(30);
+            takeDamage(10);
         }
     }
 

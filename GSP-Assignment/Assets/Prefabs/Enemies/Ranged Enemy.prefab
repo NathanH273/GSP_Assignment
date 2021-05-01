@@ -103,7 +103,7 @@ MonoBehaviour:
   walkPointRange: 5
   attackSpeed: 1
   bulletSpawn: {fileID: 7073760050304435123}
-  sightRange: 20
+  sightRange: 40
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0

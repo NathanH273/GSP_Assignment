@@ -9,6 +9,8 @@ public class PuzzleC : MonoBehaviour
     public TargetPuzzle T3;
     public TargetPuzzle T4;
     public GunV2 Reward;
+    public PuzzleLoot loot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,9 @@ public class PuzzleC : MonoBehaviour
     {
         if ((T1.IsCorrect == true) && (T2.IsCorrect == true) && (T3.IsCorrect == true) && (T4.IsCorrect == true))
         {
+            loot.GiveUpgrade();
             Reward.damage += 20;
+            
             Destroy(this);
         }
     }
