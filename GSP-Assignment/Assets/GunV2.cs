@@ -22,6 +22,7 @@ public class GunV2 : MonoBehaviour
     public AudioClip gunShotSFX;
     private bool isReloading = false;
     private float nextTimeToFire = 0f;
+    public int layerMask;
 
 
   
@@ -34,6 +35,7 @@ public class GunV2 : MonoBehaviour
 
     void Start()
     {
+        layerMask = 11;
         Physics.IgnoreLayerCollision(11, 13);
         currentAmmo = maxAmmo;
         ammoHud.SetAmmo(currentAmmo, maxAmmo);
@@ -89,7 +91,7 @@ public class GunV2 : MonoBehaviour
         AudioSource.PlayClipAtPoint(gunShotSFX, transform.position, 0.5f);
 
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range, layerMask))
         {
             //Debug.Log(hit.transform.name);
 
@@ -103,10 +105,10 @@ public class GunV2 : MonoBehaviour
        
             }
 
-            if(T != null)
+            if(T != null) 
             {
                 T.hitT();
-                Debug.Log("IT WORKS");
+                //Debug.Log("IT WORKS");
             }
 
 

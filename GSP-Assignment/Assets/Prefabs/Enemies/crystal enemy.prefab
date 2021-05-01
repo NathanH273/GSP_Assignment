@@ -161,11 +161,11 @@ MonoBehaviour:
   bowEnemy: {fileID: 6384072480067832586}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointSet: 0
-  walkPointRange: 111
+  walkPointRange: 5
   attackSpeed: 0.11
   bulletSpawn: {fileID: 6384072480115540456}
-  sightRange: 22.3
-  attackRange: 7
+  sightRange: 40
+  attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0
   explosionParticles: {fileID: 4712358693697796928, guid: 3d574f216cdb648478dfc4960bc39f5e,
