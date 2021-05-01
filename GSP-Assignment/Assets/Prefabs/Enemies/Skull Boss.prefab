@@ -416,6 +416,14 @@ MonoBehaviour:
   enemyScript: {fileID: 6712250919337611456}
   enemySpawn: {fileID: 1914172519239365433, guid: 9953c8d7369d7854bb50909f7de82d14,
     type: 3}
+  boss: {fileID: 0}
+  timer: 0
+  seconds: 0
+  attackTimer: 0
+  attackSeconds: 3
+  chargeAttack: 0
+  cooldownTimer: 0
+  cooldown: 6
 --- !u!114 &1681937823599052499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,6 +668,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b77de15a6c8222e488b03b557f4865f0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98491d0d8e4bccf4ebb2c020e0971383, type: 2}
     - target: {fileID: 919132149155446097, guid: b77de15a6c8222e488b03b557f4865f0,
         type: 3}
       propertyPath: m_Name
@@ -670,6 +683,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5901893356585517859, guid: b77de15a6c8222e488b03b557f4865f0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98491d0d8e4bccf4ebb2c020e0971383, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b77de15a6c8222e488b03b557f4865f0, type: 3}
 --- !u!4 &8777931341516316673 stripped
