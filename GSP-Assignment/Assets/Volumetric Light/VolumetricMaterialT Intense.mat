@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: VolumetricMaterialT 1
+  m_Name: VolumetricMaterialT Intense
   m_Shader: {fileID: -6465566751694194690, guid: 9a3d35d446d1f7c41b017e74cd9a2ee1,
     type: 3}
   m_ShaderKeywords: 
