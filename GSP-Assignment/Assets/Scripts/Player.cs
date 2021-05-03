@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -33,7 +34,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+      if(currentHealth<= 0)
+        {
+            Die();
+        }
     }
 
     public void takeDamage(int damage)
@@ -82,5 +86,9 @@ public class Player : MonoBehaviour
         //Debug.Log("player not invisible");
     }
 
+    public void Die()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
  
 }
