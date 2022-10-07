@@ -1,6 +1,9 @@
 # Archelight
 Archelight is a third person rogue-like game with a procedural game world. Every instance of Archelight will be unique, from the world to the weaponary.
 
+## Narrative Video
+[![youtube](https://img.youtube.com/vi/v5COM4oAJJ8/0.jpg)](https://www.youtube.com/watch?v=v5COM4oAJJ8)
+
 ## Instructions for installation
 1. Click on this link: https://github.com/NathanH273/GSP_Assignment/releases/tag/release
 2. Press the Archelight.Build.Version1.0.zip folder.
