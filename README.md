@@ -12,7 +12,7 @@ Nathan H. - Project Leader, Programmer
 
 Lewis R. - Programmer
 
-Leon S. - Lead Programmer
+[Leon S.](https://leonlol-dev.github.io/Portfolio/index.html) - Lead Programmer
 
 Edwin T. - Game Designer
 
