@@ -12,6 +12,10 @@ Edwin T. - Game Designer
 
 George M. - Game Designer
 
+## Stack
+- [Unity](https://unity.com/) - Unity Game Engine
+- [NavMeshComponent](https://github.com/Unity-Technologies/NavMeshComponents) - Unity's NavMeshComponents used for NavMeshAgents.
+
 ## Specification
 
  
