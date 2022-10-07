@@ -25,6 +25,7 @@ George M. - Game Designer
 - [Unity](https://unity.com/) - Unity Game Engine
 - [NavMeshComponent](https://github.com/Unity-Technologies/NavMeshComponents) - Unity's NavMeshComponents used for NavMeshAgents.
 
-## Specification
+## Report
+[Click here](https://github.com/NathanH273/GSP_Assignment/blob/main/HCTGW%20-%20Design%26Development%20Report.pdf) to view our report on this project. 
 
  
